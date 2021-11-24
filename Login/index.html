@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Login y Registro</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/logo.png" />'; 
+
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">	
+
+</head>
+<body>
+	
+	<div class="limiter">
+	<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+			
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54" id="formLogin">
+	<form class="login100-form validate-form" action="php_action/login.php" method="POST" id="frmLogin">
+					<span class="login100-form-title p-b-49">
+						Iniciar Sesión
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Usuario requerido">
+						<span class="label-input100">Correo Electrónico o Téléfono</span>
+					<input class="input100 login" type="text" name="username" placeholder="Correo Electrónico o Téléfono" required="required"  disabled />
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Contraseña requerida">
+						<span class="label-input100">Contraseña</span>
+						<input class="input100 login" type="password" name="password" placeholder="Introduce tu contraseña" required="required" disabled />
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+					
+					<div class="text-right p-t-8 p-b-31">
+						<a href="#">
+							¿Has olvido tu contraseña?
+						</a>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn" id="btningresar" disabled>Ingresar</button>
+						</div>
+					</div>
+
+					<div class="txt1 text-center p-t-54 p-b-20">
+						<span>
+							O regístrese utilizando
+						</span>
+					</div>
+
+					<div class="flex-c-m">
+						<a href="#" class="login100-social-item bg1">
+							<i class="fa fa-facebook"></i>
+						</a>
+
+						<a href="#" class="login100-social-item bg2">
+							<i class="fa fa-twitter"></i>
+						</a>
+
+						<a href="#" class="login100-social-item bg3">
+							<i class="fa fa-google"></i>
+						</a>
+					</div>
+
+					<div class="flex-col-c p-t-155">
+						<span class="txt1 p-b-17">
+							O puede crear una cuenta
+						</span>
+
+						<a href="#" class="txt2 registro" id="crearCuenta">
+							Crear Cuenta
+						</a>
+						<a href="#" class="txt2 registro" id="cambiaNombre">
+							Cerrar Registro
+						</a>
+					</div>
+				</form>
+			</div>
+          
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54" id="formReg">
+           
+		<form class="login100-form validate-form1" id="frmRegistro" action="php_action/registro.php" method="POST">
+					<span class="login100-form-title p-b-49">
+						Registro
+					</span>
+                <table>
+                	<tr>
+                		<td>
+                		<div class="wrap-input100 validate-input2 m-b-23" data-validate = "nombre requerido">
+						<span class="label-input100">Nombre</span>
+						<input class="input100 inpregistro" type="text" name="fname" placeholder="Ingrese su nombre" required="required" minlength="3" maxlength="30" disabled />
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>
+                		</td>
+                		<td> <div class="wrap-input100 validate-input2 m-b-23" data-validate = "apellidos requeridos">
+						<span class="label-input100">Apellidos</span>
+						<input class="input100 inpregistro" type="text" name="lname" placeholder="Ingrese apellidos" required="required" minlength="4" maxlength="50" disabled />
+						<span class="focus-input100" data-symbol="&#xf206;"></span>						
+					</div></td>	
+				   </tr>
+					<tr>
+						<div class="wrap-input100 validate-input2 m-b-23" data-validate = "Nombre de usuario requerido">
+						<span class="label-input100">Nombre de usuario</span>
+						<input class="input100 inpregistro" type="text" name="username" placeholder="Correo Electrónico o Téléfono" required="required" minlength="7" maxlength="50" disabled />
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>                	  
+					</tr>                	                
+					<tr>
+						<td>
+                    	<div class="wrap-input100 validate-input2 m-b-23" data-validate="Contraseña requerida">
+						<span class="label-input100">Contraseña</span>
+						<input class="input100 wph inpregistro" id="password" type="password" name="password" placeholder="Introduce tu contraseña" required="required" minlength="4" maxlength="16" disabled />
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+                    </td>
+					<td>  
+						<div class="wrap-input100 validate-input2 m-b-23" data-validate="Confirmación de contraseña requerida">
+						<span class="label-input100">Confirmación</span>
+						<input class="input100 wph inpregistro" id="confirm_password" type="password" name="confirm_pass" placeholder="Confirma tu contraseña" required="required"  disabled />
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+					</td>
+					</tr>          					
+										
+				</table>	
+					<div class="container-login100-form-btn" id="reg">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" id="btnregistro" disabled>
+								Registrarme
+							</button>
+						</div>
+					</div>
+         <div class="txt1 text-center p-t-54 p-b-20">
+	       <a href="#" class="registro" id="cerrarRegistro" >Prefiero iniciar sesión</a>
+		</div>	
+	     </form>          
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+
+
+	<script src="js/jquery-latest.js"></script>
+	<script src="js/registro.js"></script>
+
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="vendor/select2/select2.min.js"></script>
+
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	
+	<script src="js/main.js"></script>
+	<script src="js/validateRegister.js"></script>
+	<script src="js/confirmPass.js"></script>
+    
+</body>
+</html>
